@@ -14,4 +14,18 @@ function expandir() {
     $("#collapseTen").collapse('show');
     $("#collapseOne").collapse('show');
 }
+function fechar() {    
+    $("#collapseOne").collapse();
+    $("#collapseTwo").collapse();
+    $("#collapseThree").collapse();
+    $("#collapseFor").collapse();
+    $("#collapseFive").collapse();
+    $("#collapseSix").collapse();
+    $("#collapseSeven").collapse();
+    $("#collapseEight").collapse();
+    $("#collapseNine").collapse();
+    $("#collapseTen").collapse();
+    $("#collapseOne").collapse();
+    
+}
 
