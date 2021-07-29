@@ -56,7 +56,7 @@
 
                         </div>
                         <div class="col">
-                            <label for="">1.1.3</label>
+                            <label for="">1.1.4</label>
 
                         </div>
                     </div>
@@ -82,10 +82,15 @@
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <ol>
-                                        <li>Aprova devolução do representante</li>                                        
-                                        <li>Duplica pedido original no componente PEDFP018 e altera operação para <b>8158
-                                            TRANSFERE ESTOQUE DEVOLUCOES P/ FISICO</b>, com mesmo valor e desconto.</li>
-                                        <li>Cadastra ocorrência no CRM, informando <b>número do pedido duplicado e se tem deságio de 20% ou não.</b>.</li>
+                                        <li>Aprova devolução do representante.</li>
+                                        <li>Informa o representante sobre, deságio, quantidade de parcelas para debitar,
+                                            e em quais meses será debitado.</li>
+                                        <li>Duplica pedido original no componente PEDFP018 e altera operação para
+                                            <b>8158
+                                                TRANSFERE ESTOQUE DEVOLUCOES P/ FISICO</b>, com mesmo valor e desconto.
+                                        </li>
+                                        <li>Cadastra ocorrência no CRM, informando <b>número do pedido duplicado e se
+                                                tem deságio de 20% ou não.</b></li>
                                         <li><b>Transfere etapa no CRM para Fiscal emitir NF de devolução.</b></li>
                                         <li>Agenda coleta com representante.</li>
                                         <li>Solicita coleta com a transportadora.</li>
@@ -104,11 +109,11 @@
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                 data-bs-parent="#accordionExample">
-                                <div class="accordion-body">                                    
+                                <div class="accordion-body">
                                     <ol>
                                         <li>Faz emissão da NF de devolução.</li>
                                         <li><b>Anexa nota fiscal no CRM.</b></li>
-                                        <li>Transfere etapa no CRM para comercial, solicitar coleta.</li>                                        
+                                        <li>Transfere etapa no CRM para comercial, solicitar coleta.</li>
                                     </ol>
                                 </div>
                             </div>
@@ -122,26 +127,31 @@
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                 data-bs-parent="#accordionExample">
-                                <div class="accordion-body">                                    
+                                <div class="accordion-body">
                                     <ol>
                                         <li>
-                                           Recebe a mercadoria da transportadora.
+                                            Recebe a mercadoria da transportadora.
                                         </li>
                                         <li>
-                                            <b>Confere quantidade de volumes com a nota fiscal e estado das embalagens.</b>
+                                            <b>Confere quantidade de volumes com a nota fiscal e estado das
+                                                embalagens.</b>
                                         </li>
                                         <li>
                                             Se houver rasuras, fazer ressalva atrás do conhecimento.
                                         </li>
                                         <li>Assina conhecimento.</li>
                                         <li>Bipar as peças no componente GERFM101.</li>
-                                        <li>Colocar na descrição a razão social e número do pedido(CRM).</li>
-                                        <li><b>Acrescenta informação no CRM, número da contagem e total de peças devolvidas.</b></li>                                        
+                                        <li>Colocar na descrição da contagem, a razão social e número do pedido(CRM).
+                                        </li>
+                                        <li><b>Acrescenta informação no CRM, número da contagem e total de peças
+                                                devolvidas.</b></li>
                                         <li>Revisa as peças.</li>
                                         <li>Remove da contagem as peças com defeito.</li>
                                         <li>Acrescenta informação no CRM, quantidade de peças boas.</li>
                                         <li><b>Lança valor total devolvido no CRM de peças boas.</b></li>
-                                        <li><b>Transfere do estoque 5 transitório, peças LD para estoque 6 LD, operação 8160 TRANSFERE ESTOQUE DEVOLUCOES P/ LD componente TRAFM060.</b></li>
+                                        <li><b>Transfere do estoque 5 transitório, peças LD para estoque 6 LD, operação
+                                                8160 TRANSFERE ESTOQUE DEVOLUCOES P/ LD, no componente TRAFM060.</b>
+                                        </li>
                                         <li>Movimenta etapa no CRM para expedição.</li>
                                     </ol>
                                 </div>
@@ -161,10 +171,11 @@
                                         <li>Confere quantidade recebida da produção.</li>
                                         <li><b>Vincula contagem com pedido, através do componente GERFP083.</b></li>
                                         <li>Sugere contagem, componente PEDFM001/ PEDFM003.</li>
-                                        <li>Confere quantidade lançado no CRM com o sistema.</li>                                        
-                                        <li>Processa o faturamento para transferir peças do estoque 5 para 1 Físico.</li>
+                                        <li>Confere quantidade lançado no CRM com o sistema.</li>
+                                        <li>Processa o faturamento para transferir peças do estoque 5 para 1 Físico.
+                                        </li>
                                         <li>Transfere etapa no CRM para Financeiro.</li>
-                                    </ol>                                    
+                                    </ol>
                                 </div>
                             </div>
                         </div>
@@ -181,7 +192,7 @@
                                     <ol>
                                         <li>Verifica informações no CRM.</li>
                                         <li>Realiza o abatimento do valor devolvido.</li>
-                                        <li>Faz a cobrança da diferença.</li>                                        
+                                        <li>Faz a cobrança da diferença.</li>
                                     </ol>
                                 </div>
                             </div>
@@ -190,10 +201,31 @@
                             <h2 class="accordion-header" id="headingSix">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    <h2>Equipe</h2>
+                                    <h2>Débito dos Mostruários</h2>
                                 </button>
                             </h2>
                             <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>O débito dos mostruários aconteceram em 4 parcelas subsequentes.</p>
+                                    <p>Os mostruários serão debitados da comissão sempre na próxima coleção, ex: de inverno será
+                                        debitado no verão e verão debitado no inverno, conforme cronograma abaixo:</p>
+                                    <ol>
+                                        <li><b>Mostruário de Verão</b> - Fevereiro | Março | Abril | Maio.</li>
+                                        <li><b>Mostruário de Inverno</b> - Julho | Agosto | Setembro | Outubro.</li>
+                                    </ol>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    <h2>Equipe</h2>
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <ol>
@@ -203,67 +235,67 @@
                                         <li>Expedição - 2 pessoas</li>
                                         <li>Financeiro - 1 pessoa</li>
                                     </ol>
-                                
-                                </div>
-                            </div>
-                        </div>
-                        <hr>                      
-                        
-                        
-                        
-                    <div class="container">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <button onclick="inicio()" type="button"
-                                            class="btn btn-outline-success btn-lg btn-block">Inicio</button>
-                                    </div>
-                                    <div class="row">
-                                        <button onclick="expandir()" type="button"
-                                            class="btn btn-outline-success btn-lg btn-block">Expandir
-                                            todas</button>
-                                    </div>
-                                    <div class="row">
-                                        <button onclick="fechar()" type="button"
-                                            class="btn btn-outline-success btn-lg btn-block">Fechar
-                                            todas</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
 
-                    <footer>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
+
+
                         <div class="container">
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-body">
-                                        <a href="https://api.whatsapp.com/send?phone=+5547999144775&text=Olá+Edson+,+tudo+bem+?"
-                                            target="_blank"
-                                            title="Inicie uma conversa no watsapp com: +5547999144775 mensagem: Olá Edson, tudo bem?">
-                                            <img border="0" width="16" alt="whatsapp"
-                                                src="https://i.ibb.co/f46zXgh/whatsapp.png"
-                                                style="border: 0; height: 32px; width: 32px;"></a>
-                                        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=edsonp.bsi@gmail.com&amp;su=Contato - Projeto Sala de Malhas&amp;body=Olá Edson, Tudo bem?"
-                                            target="_blank"
-                                            title="mailto: edsonp.bsi@gmail.com assunto: Contato - Projeto Sala de Malhas mensagem: Olá Edson, tudo bem?">
-                                            <img border="0" width="16" alt="Gmail"
-                                                style="border:0; height:32px; width:32px"
-                                                src="https://i.ibb.co/WpW9YsX/gmail.png"></a>
-
+                                        <div class="row">
+                                            <button onclick="inicio()" type="button"
+                                                class="btn btn-outline-success btn-lg btn-block">Inicio</button>
+                                        </div>
+                                        <div class="row">
+                                            <button onclick="expandir()" type="button"
+                                                class="btn btn-outline-success btn-lg btn-block">Expandir
+                                                todas</button>
+                                        </div>
+                                        <div class="row">
+                                            <button onclick="fechar()" type="button"
+                                                class="btn btn-outline-success btn-lg btn-block">Fechar
+                                                todas</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <hr>
 
-                    </footer>
+                        <footer>
+                            <div class="container">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="card-body">
+                                            <a href="https://api.whatsapp.com/send?phone=+5547999144775&text=Olá+Edson+,+tudo+bem+?"
+                                                target="_blank"
+                                                title="Inicie uma conversa no watsapp com: +5547999144775 mensagem: Olá Edson, tudo bem?">
+                                                <img border="0" width="16" alt="whatsapp"
+                                                    src="https://i.ibb.co/f46zXgh/whatsapp.png"
+                                                    style="border: 0; height: 32px; width: 32px;"></a>
+                                            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=edsonp.bsi@gmail.com&amp;su=Contato - Projeto Sala de Malhas&amp;body=Olá Edson, Tudo bem?"
+                                                target="_blank"
+                                                title="mailto: edsonp.bsi@gmail.com assunto: Contato - Projeto Sala de Malhas mensagem: Olá Edson, tudo bem?">
+                                                <img border="0" width="16" alt="Gmail"
+                                                    style="border:0; height:32px; width:32px"
+                                                    src="https://i.ibb.co/WpW9YsX/gmail.png"></a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </footer>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="js/jqueri.js"></script>
+        <script src="js/jqueri.js"></script>
 </body>
 
 </html>
