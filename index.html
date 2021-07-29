@@ -56,7 +56,7 @@
 
                         </div>
                         <div class="col">
-                            <label for="">1.1.4</label>
+                            <label for="">1.1.5</label>
 
                         </div>
                     </div>
@@ -83,11 +83,11 @@
                                 <div class="accordion-body">
                                     <ol>
                                         <li>Aprova devolução do representante.</li>
-                                        <li>Informa o representante sobre, deságio, quantidade de parcelas para debitar,
-                                            e em quais meses será debitado.</li>
-                                        <li>Duplica pedido original no componente PEDFP018 e altera operação para
-                                            <b>8158
+                                        <li>Informa o representante sobre deságio.</li>
+                                        <li>Duplica pedido original no componente PEDFP010.</li>
+                                        <li>Altera operação no componente PEDFP018 para, <b>8158
                                                 TRANSFERE ESTOQUE DEVOLUCOES P/ FISICO</b>, com mesmo valor e desconto.
+                                        </li>
                                         </li>
                                         <li>Cadastra ocorrência no CRM, informando <b>número do pedido duplicado e se
                                                 tem deságio de 20% ou não.</b></li>
@@ -140,11 +140,11 @@
                                             Se houver rasuras, fazer ressalva atrás do conhecimento.
                                         </li>
                                         <li>Assina conhecimento.</li>
-                                        <li>Bipar as peças no componente GERFM101.</li>
-                                        <li>Colocar na descrição da contagem, a razão social e número do pedido(CRM).
-                                        </li>
-                                        <li><b>Acrescenta informação no CRM, número da contagem e total de peças
-                                                devolvidas.</b></li>
+                                        <li>Consulta número do pedido no CRM, de acordo com razão social da NF de
+                                            devolução.</li>
+                                        <li>Bipar as peças no componente PEDFM001/Faturamento/Contagem/.</li>
+                                        <li>Sugere contagem, componente PEDFM001/ PEDFM003.</li>
+                                        <li><b>Acrescenta informação no CRM, total de peças devolvidas e valor.</b></li>
                                         <li>Revisa as peças.</li>
                                         <li>Remove da contagem as peças com defeito.</li>
                                         <li>Acrescenta informação no CRM, quantidade de peças boas.</li>
@@ -168,9 +168,8 @@
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <ol>
-                                        <li>Confere quantidade recebida da produção.</li>
-                                        <li><b>Vincula contagem com pedido, através do componente GERFP083.</b></li>
                                         <li>Sugere contagem, componente PEDFM001/ PEDFM003.</li>
+                                        <li>Confere quantidade recebida da produção.</li>
                                         <li>Confere quantidade lançado no CRM com o sistema.</li>
                                         <li>Processa o faturamento para transferir peças do estoque 5 para 1 Físico.
                                         </li>
@@ -207,8 +206,9 @@
                             <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <p>O débito dos mostruários aconteceram em 4 parcelas subsequentes.</p>
-                                    <p>Os mostruários serão debitados da comissão sempre na próxima coleção, ex: de inverno será
+                                    <p>O débito dos mostruários aconteceram em até 4 parcelas subsequentes, dependendo do valor.</p>
+                                    <p>Os mostruários serão debitados da comissão sempre na próxima coleção, ex: de
+                                        inverno será
                                         debitado no verão e verão debitado no inverno, conforme cronograma abaixo:</p>
                                     <ol>
                                         <li><b>Mostruário de Verão</b> - Fevereiro | Março | Abril | Maio.</li>
@@ -222,10 +222,120 @@
                             <h2 class="accordion-header" id="headingSeven">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                    <h2>Equipe</h2>
+                                    <h2>Prazo por Etapas do Processo</h2>
                                 </button>
                             </h2>
                             <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="card">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-hover table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">Setor</th>
+                                                        <th scope="col">Operação</th>
+                                                        <th scope="col">Prazo</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Comercial</td>
+                                                        <td>Aprovação Devolução</td>
+                                                        <td>1 dias.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Comercial</td>
+                                                        <td>Lançar informações no CRM</td>
+                                                        <td>1 dias.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>Fiscal</td>
+                                                        <td>Gerar NF de devolução</td>
+                                                        <td>1 dia.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">4</th>
+                                                        <td>Comercial</td>
+                                                        <td>Solicitar coleta</td>
+                                                        <td>1 dia.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">5</th>
+                                                        <td>Comercial</td>
+                                                        <td>Entrega na KR3</td>
+                                                        <td>15 dias.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">6</th>
+                                                        <td>Produção</td>
+                                                        <td>Bipar entrada</td>
+                                                        <td>2 dias.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">7</th>
+                                                        <td>Produção</td>
+                                                        <td>Lançar informações no CRM</td>
+                                                        <td>1 dias.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">8</th>
+                                                        <td>Produção</td>
+                                                        <td>Revisar peças</td>
+                                                        <td>7 dias.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">9</th>
+                                                        <td>Produção</td>
+                                                        <td>Lançar informações no CRM</td>
+                                                        <td>1 dias.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">10</th>
+                                                        <td>Produção</td>
+                                                        <td>Transferir estoque</td>
+                                                        <td>1 dias.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">11</th>
+                                                        <td>Expedição</td>
+                                                        <td>Conferir entrada</td>
+                                                        <td>1 dias.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">12</th>
+                                                        <td>Expedição</td>
+                                                        <td>Finalizar transferência</td>
+                                                        <td>1 dias.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">13</th>
+                                                        <td>Financeiro</td>
+                                                        <td>Informar representante</td>
+                                                        <td>1 dias.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingEight">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    <h2>Equipe</h2>
+                                </button>
+                            </h2>
+                            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <p>Quantidade de pessoas envolvidas no processo por setor.</p>

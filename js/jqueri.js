@@ -11,6 +11,7 @@ function expandir() {
     $("#collapseFive").collapse('show');
     $("#collapseSix").collapse('show');
     $("#collapseSeven").collapse('show');
+    $("#collapseEight").collapse('show');
     $("#collapseOne").collapse('show');
     
 }
@@ -22,6 +23,7 @@ function fechar() {
     $("#collapseFive").collapse();
     $("#collapseSix").collapse();
     $("#collapseSeven").collapse();
+    $("#collapseEight").collapse('show');
     
     
 }
