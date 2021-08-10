@@ -1,11 +1,10 @@
 function inicio(){
     $("html, body").animate({scrollTop: 0}, 300);
 }
-function expandir() {
-       
+function expandir() {     
     
     
-    $("#collapseOne").collapse('show');
+    
     $("#collapseTwo").collapse('show');
     $("#collapseThree").collapse('show');
     $("#collapseFor").collapse('show');
@@ -15,6 +14,7 @@ function expandir() {
     $("#collapseEight").collapse('show');
     $("#collapseNine").collapse('show');
     $("#collapseTen").collapse('show');
+    $("#collapseOne").collapse('show');
     
 }
 function fechar() {    
