@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<!-- CSS only -->
+	<link href="../Formulario_Seti/Arquivos_Jquery_Bootstrap/bootstrap.min.css" rel="stylesheet">
+	<script src="../Formulario_Seti/Arquivos_Jquery_Bootstrap/jquery.min.js"></script>
+	<script src="../Formulario_Seti/Arquivos_Jquery_Bootstrap/bootstrap.bundle.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="src/styles.css">
+	<link rel="icon" type=" image / png " href="../Formulario_Seti/images/seti-black.png" alt="logo" width="35px" height="35px">
+
+	<title>Teste Frontend Seti</title>
+
+</head>
+
+<body class="body">
+
+	<div class="row">
+		<div class="col-2"></div>
+		<div class="card col-8">
+			<div class="card-header text-center">
+				Formulário para compra de código
+				<a href="https://www.seti.com.br/" target="_blank">
+					<img class="logo" src="images/seti-black.png" alt="logo"></a>
+			</div>
+
+			<div class="form-group">
+				<br>
+				<div>
+					<fieldset class="scheduler-border">
+						<legend class="scheduler-border">Quais linguagens você deseja:</legend>
+
+						<br>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="">
+							<label class="form-check-label">Vue</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="">
+							<label class="form-check-label">Java</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="">
+							<label class="form-check-label">C#</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="">
+							<label class="form-check-label">C/C ++</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="">
+							<label class="form-check-label">php</label>
+						</div>
+
+						<br>
+					</fieldset>
+
+				</div>
+				<br>
+
+				<div>
+					<fieldset class="scheduler-border">
+						<legend class="scheduler-border">Quantos Códigos de cada?</legend>
+						<br>
+
+						
+							<div class="counter row">	
+	
+								<div class="col-1">
+									<button id="soma" class="btn">
+										<svg xmlns="http://www.w3.org/2000/svg" width="42px" height="42px">
+											<path
+												d="M4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42zm4.666-23.333h9.334V9.333h4.666v9.334h9.334v4.666h-9.334v9.334h-4.666v-9.334H9.333v-4.666z" />
+										</svg>
+	
+									</button>
+									
+								</div>
+								<div class="col-1">
+									<input class="text-center" type="number" id="qtde" placeholder="0" />
+	
+								</div>
+								<div class="col-1">
+									<button id="subtrai" class="btn">
+										<svg xmlns="http://www.w3.org/2000/svg"  width="42px"
+											height="42px">
+											<path
+												d="M4.667 0A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667zm28 23.333H9.333v-4.666h23.334v4.666z" />
+										</svg>
+	
+									</button>
+								</div>
+	
+							</div>						
+						<br>
+					</fieldset>
+
+				</div>
+				<br>
+
+				<div class="custom-info">
+					<fieldset class="scheduler-border">
+						<legend class="scheduler-border">Observações</legend>
+
+						<br>
+						<textarea class="textarea" name="descricao"
+							placeholder="Alguma dúvida? Recomendação?"></textarea>
+						<br>
+						<br>
+
+					</fieldset>
+				</div>
+				<br>
+
+				<div class="card-footer">
+					<button id="enviar"type="button" class="btn">Enviar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="../Formulario_Seti/src/index.js"></script>
+</body>
+
+</html>
