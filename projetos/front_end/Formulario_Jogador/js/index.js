@@ -36,7 +36,7 @@ $("#inscrever").click(function(){
         
      }else{
          
-        alert(nome.val() + ", você foi cadastrado com sucesso!"+ nome);
+        alert(nome.val() + ", você foi cadastrado com sucesso!");
         //limpa campos
         $("#nome").val("");
         $("#nascimento").val("");

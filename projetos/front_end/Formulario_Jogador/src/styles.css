@@ -3,7 +3,21 @@
  }
  #inscrever {
      background-color: green;
+     color: white;    
+
  }
- .row {
-     background-color: black;
+ body {
+     background-color: black;     
+ }
+ .card-footer {
+     background-color: cadetblue;
+ }
+ .card-header {
+    background-color: cadetblue;
+    color: white;
+    font-size: 22px;
+    
+ }
+ .card {
+     background-color: teal;    
  }
