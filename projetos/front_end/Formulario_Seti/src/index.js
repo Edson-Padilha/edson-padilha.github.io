@@ -35,7 +35,7 @@ $("#enviar").click(function(){
     }else{
         alert("Selecione uma das opções e quantidade maior que zero! ")
     }
-});
+}); 
 
 
 
