@@ -1,5 +1,6 @@
 
 let cont = 0;
+
 // Função de  subtração na quantidade 
 $("#subtrai").click(function (){   
     cont = cont -1; 
@@ -17,16 +18,26 @@ $("#subtrai").click(function (){
 
 // Função de acrécimo de quantidade
 $("#soma").click(function (){
-    cont = cont +1;
-    document.getElementById('qtde').value = cont;
+    cont = cont + 1;
+    if (cont > 0){        
+        document.getElementById('qtde').value = cont;
+    }  
     
     }
+    
 );
 
 // Mensagem ao clicar no botão enviar
+let checkbox = $(".form-check-input")
 $("#enviar").click(function(){
-    alert("Pedido enviado com sucesso")
+    if (checkbox .is(":checked") && document.getElementById('qtde').value >= 1){
+        confirm("Deseja enviar o pedido?")
+    }else{
+        alert("Selecione uma das opções e quantidade maior que zero! ")
+    }
 });
+
+
 
         
 

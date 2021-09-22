@@ -29,7 +29,7 @@ $("#inscrever").click(function(){
         $(".erromsg span").text("usuário, diferente de "+ usuario.val());
         return;
      }
-     if(!senha.val() || senha.val().length < 6){
+          if(!senha.val() || senha.val().length < 6){
         senha.after(erromsg);
         $(".erromsg span").text("senha corretamente");
         return;
