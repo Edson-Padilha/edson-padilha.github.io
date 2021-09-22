@@ -24,7 +24,7 @@ $("#inscrever").click(function(){
         $(".erromsg span").text("usuario corretamente");
         return;
      }
-     if(!usuario.val() || usuario.val() == "x2018" || usuario.val() == "kiwi"){
+     if(!usuario.val() || usuario.val() == "x2018" || usuario.val() == "kiwi" || usuario.val() == "cloud"){
         usuario.after(erromsg);
         $(".erromsg span").text("usuário, diferente de "+ usuario.val());
         return;
